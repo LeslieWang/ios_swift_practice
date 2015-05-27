@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0241B168E38001A11A3 /* AppDelegate.swift */; };
 		CEDBC0281B168E38001A11A3 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0261B168E38001A11A3 /* FoodPin.xcdatamodeld */; };
-		CEDBC02A1B168E38001A11A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0291B168E38001A11A3 /* ViewController.swift */; };
 		CEDBC02D1B168E38001A11A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDBC02B1B168E38001A11A3 /* Main.storyboard */; };
 		CEDBC02F1B168E38001A11A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDBC02E1B168E38001A11A3 /* Images.xcassets */; };
 		CEDBC0321B168E38001A11A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDBC0301B168E38001A11A3 /* LaunchScreen.xib */; };
 		CEDBC03E1B168E38001A11A3 /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC03D1B168E38001A11A3 /* FoodPinTests.swift */; };
+		CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		CEDBC0231B168E38001A11A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDBC0241B168E38001A11A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDBC0271B168E38001A11A3 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
-		CEDBC0291B168E38001A11A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEDBC02C1B168E38001A11A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEDBC02E1B168E38001A11A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CEDBC0311B168E38001A11A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CEDBC0371B168E38001A11A3 /* FoodPinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDBC03C1B168E38001A11A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDBC03D1B168E38001A11A3 /* FoodPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinTests.swift; sourceTree = "<group>"; };
+		CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantListViewController.swift; path = classes/ViewController/RestaurantListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				CEDBC0241B168E38001A11A3 /* AppDelegate.swift */,
-				CEDBC0291B168E38001A11A3 /* ViewController.swift */,
 				CEDBC02B1B168E38001A11A3 /* Main.storyboard */,
 				CEDBC02E1B168E38001A11A3 /* Images.xcassets */,
 				CEDBC0301B168E38001A11A3 /* LaunchScreen.xib */,
 				CEDBC0261B168E38001A11A3 /* FoodPin.xcdatamodeld */,
 				CEDBC0221B168E38001A11A3 /* Supporting Files */,
+				CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -215,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDBC02A1B168E38001A11A3 /* ViewController.swift in Sources */,
 				CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */,
+				CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */,
 				CEDBC0281B168E38001A11A3 /* FoodPin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

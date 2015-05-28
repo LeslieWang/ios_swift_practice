@@ -12,6 +12,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homei" id="MH1-ta-wEw">
+                            <rect key="frame" x="0.0" y="130" width="320" height="275"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fTG-sh-4t7">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -26,6 +30,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Food Pin" id="9LC-Uq-Jj8"/>
+                    <connections>
+                        <outlet property="image" destination="MH1-ta-wEw" id="vxt-bS-k0C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuQ-Hx-7Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +55,9 @@
             <point key="canvasLocation" x="-454" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homei" width="480" height="480"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

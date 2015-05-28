@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class RestaurantListViewController: UITableViewController {
+    @IBOutlet var image:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,21 @@ class RestaurantListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            var restaurant:Restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: moc) as! Restaurant
+            restaurant.name = "Leslie Demo"
+            restaurant.type = "Chinese"
+            restaurant.location = "No 1388 Zhongba St, close to Supo flyover, Chengdu, Sichuan, China."
+            restaurant.image = UIImagePNGRepresentation(image.image)
+            restaurant.visited = false
+            
+            var error:NSError?
+            if !moc.save(&error) {
+                println("Failed to insert mock restaurant.")
+            } else {
+                println("Success to insert mock restaurant.")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

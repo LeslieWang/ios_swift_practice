@@ -21,6 +21,10 @@ class RestaurantListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // set table cell flexible in vertical
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         loadRecords()
     }
 
@@ -48,10 +52,12 @@ class RestaurantListViewController: UITableViewController {
         
         var restaurant:Restaurant = restaurants[indexPath.row]
         cell.nameLabel.text = restaurant.name
-        cell.locationLabel.text = restaurant.location + "it is a long string text to veify."
+        cell.locationLabel.text = restaurant.location
         cell.typeLabel.text = restaurant.type
         cell.thumbnailImageView.image = UIImage(data: restaurant.image)
         cell.favorIconImageView.hidden = !restaurant.visited.boolValue
+        
+        // set circle image
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2
         cell.thumbnailImageView.clipsToBounds = true
 

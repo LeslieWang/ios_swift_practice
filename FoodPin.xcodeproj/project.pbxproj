@@ -15,6 +15,7 @@
 		CEDBC03E1B168E38001A11A3 /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC03D1B168E38001A11A3 /* FoodPinTests.swift */; };
 		CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */; };
 		CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC04B1B169544001A11A3 /* Restaurant.swift */; };
+		CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		CEDBC03D1B168E38001A11A3 /* FoodPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinTests.swift; sourceTree = "<group>"; };
 		CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantListViewController.swift; path = classes/ViewController/RestaurantListViewController.swift; sourceTree = "<group>"; };
 		CEDBC04B1B169544001A11A3 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = classes/Model/Restaurant.swift; sourceTree = "<group>"; };
+		CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantCell.swift; path = classes/ViewController/RestaurantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				CEDBC0221B168E38001A11A3 /* Supporting Files */,
 				CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */,
 				CEDBC04B1B169544001A11A3 /* Restaurant.swift */,
+				CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */,
 				CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */,
 				CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */,
 				CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */,
@@ -417,6 +421,7 @@
 				CEDBC0431B168E38001A11A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEDBC0441B168E38001A11A3 /* Build configuration list for PBXNativeTarget "FoodPinTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				CEDBC0461B168E38001A11A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

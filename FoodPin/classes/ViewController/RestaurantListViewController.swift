@@ -10,7 +10,8 @@ import UIKit
 import CoreData
 
 class RestaurantListViewController: UITableViewController {
-    @IBOutlet var image:UIImageView!
+    var restaurants:[Restaurant] = []
+    var fetchController:NSFetchedResultsController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +21,7 @@ class RestaurantListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
-            var restaurant:Restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: moc) as! Restaurant
-            restaurant.name = "Leslie Demo"
-            restaurant.type = "Chinese"
-            restaurant.location = "No 1388 Zhongba St, close to Supo flyover, Chengdu, Sichuan, China."
-            restaurant.image = UIImagePNGRepresentation(image.image)
-            restaurant.visited = false
-            
-            var error:NSError?
-            if !moc.save(&error) {
-                println("Failed to insert mock restaurant.")
-            } else {
-                println("Success to insert mock restaurant.")
-            }
-        }
+        loadRecords()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,24 +34,32 @@ class RestaurantListViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return restaurants.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! RestaurantCell
+        
+        var restaurant:Restaurant = restaurants[indexPath.row]
+        cell.nameLabel.text = restaurant.name
+        cell.locationLabel.text = restaurant.location + "it is a long string text to veify."
+        cell.typeLabel.text = restaurant.type
+        cell.thumbnailImageView.image = UIImage(data: restaurant.image)
+        cell.favorIconImageView.hidden = !restaurant.visited.boolValue
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2
+        cell.thumbnailImageView.clipsToBounds = true
 
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -111,4 +106,21 @@ class RestaurantListViewController: UITableViewController {
     }
     */
 
+    func loadRecords() {
+        if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            var fetchRequest = NSFetchRequest(entityName: "Restaurant")
+            let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+            fetchRequest.sortDescriptors = [sortDescriptor]
+            
+            fetchController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+            
+            var e:NSError?
+            var results = fetchController.performFetch(&e)
+            restaurants = fetchController.fetchedObjects as! [Restaurant]
+            
+            if !results {
+                println(e?.localizedDescription)
+            }
+        }
+    }
 }

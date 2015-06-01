@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RestaurantListViewController: UITableViewController {
+class RestaurantListViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     var restaurants:[Restaurant] = []
     var fetchController:NSFetchedResultsController!
 
@@ -111,6 +111,84 @@ class RestaurantListViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // ***add this func to enbale 'swipe' feature***
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle:
+        UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
+    
+    // the following 3 functions are the interfaces of NSFetchedResultsControllerDelegate
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .Insert:
+            if let index = newIndexPath {
+                tableView.insertRowsAtIndexPaths([index], withRowAnimation: .Fade)
+            }
+        case .Delete:
+            if let index = indexPath {
+                tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Fade)
+            }
+        case .Update:
+            if let index = indexPath {
+                tableView.reloadRowsAtIndexPaths([index], withRowAnimation: .Fade)
+            }
+        default:
+            tableView.reloadData()
+        }
+
+        restaurants = controller.fetchedObjects as! [Restaurant]
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.endUpdates()
+    }
+    
+    // 'swipe' responding actions
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+            
+            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
+            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
+            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
+            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            shareMenu.addAction(twitterAction)
+            shareMenu.addAction(facebookAction)
+            shareMenu.addAction(emailAction)
+            shareMenu.addAction(cancelAction)
+            
+            self.presentViewController(shareMenu, animated: true, completion: nil)
+            }
+        )
+        
+        var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete",handler: {
+            (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+
+            // Delete the row from the data source
+            if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+                
+                let restaurantToDelete = self.fetchController.objectAtIndexPath(indexPath) as! Restaurant
+                managedObjectContext.deleteObject(restaurantToDelete)
+                
+                var e: NSError?
+                if managedObjectContext.save(&e) != true {
+                    println("delete error: \(e!.localizedDescription)")
+                }
+            }
+            
+        })
+        
+        deleteAction.backgroundColor = UIColor(red: 237.0/255.0, green: 75.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+        shareAction.backgroundColor = UIColor(red: 215.0/255.0, green: 215.0/255.0, blue: 215.0/255.0, alpha: 1.0)
+        
+        return [deleteAction, shareAction]
+    }
 
     func loadRecords() {
         if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
@@ -119,6 +197,7 @@ class RestaurantListViewController: UITableViewController {
             fetchRequest.sortDescriptors = [sortDescriptor]
             
             fetchController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+            fetchController.delegate = self
             
             var e:NSError?
             var results = fetchController.performFetch(&e)

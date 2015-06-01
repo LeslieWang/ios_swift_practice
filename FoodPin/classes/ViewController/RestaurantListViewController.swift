@@ -151,11 +151,17 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         
         var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
-            
+        
+            let shareHandler = {
+            (action:UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Oops", message: "404 not found, thanks GFW.", preferredStyle: .Alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertMessage, animated: true, completion: nil)
+            }
             let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
-            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
-            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
-            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: nil)
+            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: shareHandler)
+            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: shareHandler)
+            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: shareHandler)
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
             
             shareMenu.addAction(twitterAction)

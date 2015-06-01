@@ -25,6 +25,10 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         // set table cell flexible in vertical
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // auto hide navigation bar while swipe list.
+        navigationController?.hidesBarsOnSwipe = true
+        
         loadRecords()
     }
 

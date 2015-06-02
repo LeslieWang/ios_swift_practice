@@ -24,7 +24,7 @@
         <!--Create View Controller-->
         <scene sceneID="lIg-6X-uRS">
             <objects>
-                <tableViewController title="Create View Controller" id="dev-rN-pRU" sceneMemberID="viewController">
+                <tableViewController title="Create View Controller" id="dev-rN-pRU" customClass="CreateViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OG5-MG-eXt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,14 +37,10 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qC3-Ty-NLq" id="fFv-Ef-1Or">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-Vv-Jc9">
-                                                    <rect key="frame" x="32" y="-3.5" width="256" height="256.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-Vv-Jc9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="KtJ-Vv-Jc9" secondAttribute="centerX" id="SgC-hg-rjl"/>
-                                                <constraint firstAttribute="centerY" secondItem="KtJ-Vv-Jc9" secondAttribute="centerY" id="pFE-if-WlL"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="gws-iv-KE1">
@@ -133,7 +129,7 @@
                             <outlet property="delegate" destination="dev-rN-pRU" id="FUQ-vh-AHC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="I6b-Gl-05X">
+                    <navigationItem key="navigationItem" title="Create Restaurant" id="I6b-Gl-05X">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DoP-lj-3tC">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -141,6 +137,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="KtJ-Vv-Jc9" id="opM-vx-tgn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLA-lf-TOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zI6-Vr-LlN" userLabel="Exit" sceneMemberID="exit"/>

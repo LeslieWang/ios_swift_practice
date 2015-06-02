@@ -54,7 +54,9 @@ class DetailViewController: UITableViewController {
     
     // cancel selection while clicking on detail view cell
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-         tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        // tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        // this one is better than the above one
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

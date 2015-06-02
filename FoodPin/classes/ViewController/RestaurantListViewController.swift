@@ -130,6 +130,7 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         tableView.beginUpdates()
     }
     
+    // on receive data change invent
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         switch type {
         case .Insert:
@@ -153,6 +154,15 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "viewDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow() {
+                var targetController:DetailViewController = segue.destinationViewController as! DetailViewController
+                targetController.restaurant = restaurants[indexPath.row]
+            }
+        }
     }
     
     // 'swipe' responding actions

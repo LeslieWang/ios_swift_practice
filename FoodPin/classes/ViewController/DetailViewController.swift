@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailViewController: UITableViewController {
+    @IBOutlet var restaurantImage:UIImageView!
+    
+    var restaurant:Restaurant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,8 @@ class DetailViewController: UITableViewController {
         navigationController?.hidesBarsOnSwipe = false
         
         // set teh title of this page
-        title = "Detail"
+        title = restaurant.name
+        restaurantImage.image = UIImage(data: restaurant.image)
     }
     
     override func didReceiveMemoryWarning() {

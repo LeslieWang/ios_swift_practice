@@ -76,7 +76,7 @@
                                     <outlet property="nameLabel" destination="gBc-eN-mZv" id="dvm-Z9-a5Z"/>
                                     <outlet property="thumbnailImageView" destination="GP3-tb-Gvb" id="g79-Hv-Eh0"/>
                                     <outlet property="typeLabel" destination="zuD-uf-tIP" id="ejN-MG-Bs2"/>
-                                    <segue destination="bFB-DZ-Bmy" kind="push" id="gMQ-UM-yfm"/>
+                                    <segue destination="bFB-DZ-Bmy" kind="push" identifier="viewDetail" id="gMQ-UM-yfm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,6 +117,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5R6-y7-I4t"/>
+                    <connections>
+                        <outlet property="restaurantImage" destination="PeG-1R-QHQ" id="cMJ-PI-VVH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1i7-aO-6GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

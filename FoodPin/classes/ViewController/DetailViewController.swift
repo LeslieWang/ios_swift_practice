@@ -46,6 +46,11 @@ class DetailViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // cancel selection while clicking on detail view cell
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+         tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4

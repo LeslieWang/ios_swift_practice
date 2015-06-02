@@ -33,6 +33,9 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
         
+        // set area of non-cell invisible
+        self.tableView.tableFooterView = UIView(frame:CGRectZero)
+        
         loadRecords()
     }
 

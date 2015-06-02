@@ -31,4 +31,9 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
         imageView.clipsToBounds = true
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // fix status bar bug, status bar style will change to black after displaying the photo library
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+    }
 }

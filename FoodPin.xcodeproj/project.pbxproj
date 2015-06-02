@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */; };
 		CED70E091B1C491100ED0BD0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED70E081B1C491100ED0BD0 /* DetailViewController.swift */; };
 		CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0241B168E38001A11A3 /* AppDelegate.swift */; };
 		CEDBC0281B168E38001A11A3 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0261B168E38001A11A3 /* FoodPin.xcdatamodeld */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewCell.swift; path = classes/ViewController/DetailViewCell.swift; sourceTree = "<group>"; };
 		CED70E081B1C491100ED0BD0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = classes/ViewController/DetailViewController.swift; sourceTree = "<group>"; };
 		CEDBC01F1B168E38001A11A3 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDBC0231B168E38001A11A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				CEDBC04B1B169544001A11A3 /* Restaurant.swift */,
 				CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */,
 				CED70E081B1C491100ED0BD0 /* DetailViewController.swift */,
+				CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */,
 				CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */,
+				CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */,
 				CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */,
 				CED70E091B1C491100ED0BD0 /* DetailViewController.swift in Sources */,
 				CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */,

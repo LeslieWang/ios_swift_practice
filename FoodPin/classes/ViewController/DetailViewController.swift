@@ -22,9 +22,6 @@ class DetailViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        // disable auto hide navigation bar while swipe list.
-        navigationController?.hidesBarsOnSwipe = false
-        
         // set teh title of this page
         title = restaurant.name
         
@@ -40,6 +37,14 @@ class DetailViewController: UITableViewController {
         // set table cell flexible in vertical
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        // disable auto hide navigation bar while swipe list.
+        navigationController?.hidesBarsOnSwipe = false
     }
     
     override func didReceiveMemoryWarning() {

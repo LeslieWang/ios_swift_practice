@@ -26,9 +26,6 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        // auto hide navigation bar while swipe list.
-        navigationController?.hidesBarsOnSwipe = true
-        
         // reset default back button in this flow.
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain,
             target: nil, action: nil)
@@ -37,6 +34,13 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         self.tableView.tableFooterView = UIView(frame:CGRectZero)
         
         loadRecords()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // auto hide navigation bar while swipe list.
+        navigationController?.hidesBarsOnSwipe = true
     }
 
     override func didReceiveMemoryWarning() {

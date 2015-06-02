@@ -220,6 +220,10 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         
         return [deleteAction, shareAction]
     }
+    
+    @IBAction func cancelFromCreate(segue:UIStoryboardSegue) {
+        // add actions while user cancel creating restaurant
+    }
 
     func loadRecords() {
         if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {

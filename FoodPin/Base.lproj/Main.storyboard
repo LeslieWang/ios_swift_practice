@@ -5,6 +5,22 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Create Entry-->
+        <scene sceneID="rbV-Id-E1Z">
+            <objects>
+                <navigationController title="Create Entry" id="us3-Hh-no0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mRy-0e-ZpN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dev-rN-pRU" kind="relationship" relationship="rootViewController" id="vUF-hy-KDc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hs2-g8-ztW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="-301"/>
+        </scene>
         <!--Create View Controller-->
         <scene sceneID="lIg-6X-uRS">
             <objects>
@@ -117,8 +133,17 @@
                             <outlet property="delegate" destination="dev-rN-pRU" id="FUQ-vh-AHC"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="I6b-Gl-05X">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DoP-lj-3tC">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="zI6-Vr-LlN" kind="unwind" unwindAction="cancelFromCreate:" id="93C-PZ-y4F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLA-lf-TOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zI6-Vr-LlN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="86" y="-301"/>
         </scene>
@@ -205,7 +230,7 @@
                     <navigationItem key="navigationItem" title="Food Pin" id="9LC-Uq-Jj8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xs7-mh-xl8">
                             <connections>
-                                <segue destination="dev-rN-pRU" kind="modal" id="kw1-j4-3dA"/>
+                                <segue destination="us3-Hh-no0" kind="modal" id="OXI-EL-3pR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

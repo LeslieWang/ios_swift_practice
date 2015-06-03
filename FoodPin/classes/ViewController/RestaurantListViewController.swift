@@ -179,15 +179,15 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         
             let shareHandler = {
             (action:UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Oops", message: "404 not found, thanks GFW.", preferredStyle: .Alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                let alertMessage = UIAlertController(title: NSLocalizedString("Oops", comment:"Failed to do something."), message: NSLocalizedString("404 not found, thanks GFW.", comment:"Failed to share"), preferredStyle: .Alert)
+                alertMessage.addAction(UIAlertAction(title: NSLocalizedString("OK", comment:"Face the fate"), style: .Default, handler: nil))
             self.presentViewController(alertMessage, animated: true, completion: nil)
             }
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
-            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: shareHandler)
-            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: shareHandler)
-            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: shareHandler)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            let shareMenu = UIAlertController(title: nil, message: NSLocalizedString("Share using", comment:"Share menu title"), preferredStyle: .ActionSheet)
+            let twitterAction = UIAlertAction(title: NSLocalizedString("Twitter", comment:""), style: UIAlertActionStyle.Default, handler: shareHandler)
+            let facebookAction = UIAlertAction(title: NSLocalizedString("Facebook", comment:""), style: UIAlertActionStyle.Default, handler: shareHandler)
+            let emailAction = UIAlertAction(title: NSLocalizedString("Email", comment:""), style: UIAlertActionStyle.Default, handler: shareHandler)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment:""), style: UIAlertActionStyle.Cancel, handler: nil)
             
             shareMenu.addAction(twitterAction)
             shareMenu.addAction(facebookAction)

@@ -67,17 +67,17 @@ class DetailViewController: UITableViewController {
         let cell:DetailViewCell = tableView.dequeueReusableCellWithIdentifier("detailCell") as! DetailViewCell
         switch indexPath.row {
         case 0:
-            cell.fieldLabel.text = "Name"
+            cell.fieldLabel.text = NSLocalizedString("Name", comment:"Restaurant name")
             cell.valueLabel.text = restaurant.name
         case 1:
-            cell.fieldLabel.text = "Type"
+            cell.fieldLabel.text = NSLocalizedString("Type", comment:"Restaurant type")
             cell.valueLabel.text = restaurant.type
         case 2:
-            cell.fieldLabel.text = "Location"
+            cell.fieldLabel.text = NSLocalizedString("Location", comment:"Restaurant location")
             cell.valueLabel.text = restaurant.location
         case 3:
-            cell.fieldLabel.text = "Been Here"
-            cell.valueLabel.text = restaurant.visited.boolValue ? "Yes, I've been here before" : "No"
+            cell.fieldLabel.text = NSLocalizedString("Been Here", comment:"")
+            cell.valueLabel.text = restaurant.visited.boolValue ? NSLocalizedString("Yes, I've been here before", comment:"") : NSLocalizedString("No", comment:"Not been here")
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

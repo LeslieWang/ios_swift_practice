@@ -49,13 +49,13 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
     @IBAction func save() {
         var errorStr = ""
         if nameText.text == "" {
-            errorStr = "Missing name field."
+            errorStr = NSLocalizedString("Missing name field.", comment:"")
         } else if typeText.text == "" {
-            errorStr = "Missing type field."
+            errorStr = NSLocalizedString("Missing type field.", comment:"")
         } else if locationText.text == "" {
-            errorStr = "Missing location field."
+            errorStr = NSLocalizedString("Missing location field.", comment:"")
         } else if !setImage {
-            errorStr = "Missing image."
+            errorStr = NSLocalizedString("Missing image.", comment:"")
         }
         
         if errorStr != "" {
@@ -82,8 +82,8 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
     }
     
     func showAlert(message:String) {
-        let alertController = UIAlertController(title: "Oops", message: message, preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        let alertController = UIAlertController(title: NSLocalizedString("Oops", comment:""), message: message, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: NSLocalizedString("Ok", comment:""), style: UIAlertActionStyle.Default, handler: nil)
         alertController.addAction(okAction)
         presentViewController(alertController, animated: true, completion: nil)
     }

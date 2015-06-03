@@ -1,0 +1,51 @@
+/* Class = "UILabel"; text = "Value"; ObjectID = "0CT-Wp-k1n"; */
+"0CT-Wp-k1n.text" = "数据";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "1Cw-Vc-1Wy"; */
+"1Cw-Vc-1Wy.text" = "位置";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "5CV-bG-iIG"; */
+"5CV-bG-iIG.text" = "名称";
+
+/* Class = "UINavigationItem"; title = "Food Pin"; ObjectID = "9LC-Uq-Jj8"; */
+"9LC-Uq-Jj8.title" = "吃货";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "Apy-xs-lkK"; */
+"Apy-xs-lkK.text" = "位置";
+
+/* Class = "UINavigationItem"; title = "Create Restaurant"; ObjectID = "I6b-Gl-05X"; */
+"I6b-Gl-05X.title" = "添加餐厅";
+
+/* Class = "UITextField"; placeholder = "Restaurant Location"; ObjectID = "U08-PX-zRA"; */
+"U08-PX-zRA.placeholder" = "餐厅位置";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "Uey-Tw-P0p"; */
+"Uey-Tw-P0p.text" = "类型";
+
+/* Class = "UITextField"; placeholder = "Restaurant Type"; ObjectID = "eWf-df-Ucd"; */
+"eWf-df-Ucd.placeholder" = "餐厅类型";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "fCC-RX-L1y"; */
+"fCC-RX-L1y.text" = "名称";
+
+/* Class = "UITextField"; placeholder = "Restaurant Name"; ObjectID = "fhw-5U-bwl"; */
+"fhw-5U-bwl.placeholder" = "餐厅名称";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "gBc-eN-mZv"; */
+"gBc-eN-mZv.text" = "名称";
+
+/* Class = "UILabel"; text = "Have you been here"; ObjectID = "rLH-dc-lxT"; */
+"rLH-dc-lxT.text" = "是否去过";
+
+/* Class = "UITableViewController"; title = "Restaurant List"; ObjectID = "uxh-aP-SmL"; */
+"uxh-aP-SmL.title" = "餐厅大全";
+
+/* Class = "UISegmentedControl"; vqO-3c-f3R.segmentTitles[0] = "Yes"; ObjectID = "vqO-3c-f3R"; */
+"vqO-3c-f3R.segmentTitles[0]" = "是的";
+
+/* Class = "UISegmentedControl"; vqO-3c-f3R.segmentTitles[1] = "No"; ObjectID = "vqO-3c-f3R"; */
+"vqO-3c-f3R.segmentTitles[1]" = "没有";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "zuD-uf-tIP"; */
+"zuD-uf-tIP.text" = "类型";
+

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */; };
 		CE3EA6A71B1D9BFF00D188B0 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */; };
+		CED2238C1B1F3ECF0094B2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED2238E1B1F3ECF0094B2B0 /* InfoPlist.strings */; };
+		CED223911B1F3ECF0094B2B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED223931B1F3ECF0094B2B0 /* Localizable.strings */; };
+		CED223971B1F3ED00094B2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED223991B1F3ED00094B2B0 /* InfoPlist.strings */; };
 		CED70E091B1C491100ED0BD0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED70E081B1C491100ED0BD0 /* DetailViewController.swift */; };
 		CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0241B168E38001A11A3 /* AppDelegate.swift */; };
 		CEDBC0281B168E38001A11A3 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0261B168E38001A11A3 /* FoodPin.xcdatamodeld */; };
@@ -34,6 +37,11 @@
 /* Begin PBXFileReference section */
 		CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewCell.swift; path = classes/ViewController/DetailViewCell.swift; sourceTree = "<group>"; };
 		CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = classes/ViewController/CreateViewController.swift; sourceTree = "<group>"; };
+		CED2238D1B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CED223921B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CED223941B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Main.strings; sourceTree = "<group>"; };
+		CED223981B1F3ED00094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CED2239A1B1F3ED00094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CED70E081B1C491100ED0BD0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = classes/ViewController/DetailViewController.swift; sourceTree = "<group>"; };
 		CEDBC01F1B168E38001A11A3 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDBC0231B168E38001A11A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +116,8 @@
 		CEDBC0221B168E38001A11A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CED223991B1F3ED00094B2B0 /* InfoPlist.strings */,
+				CED223931B1F3ECF0094B2B0 /* Localizable.strings */,
 				CEDBC0231B168E38001A11A3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -125,6 +135,7 @@
 		CEDBC03B1B168E38001A11A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CED2238E1B1F3ECF0094B2B0 /* InfoPlist.strings */,
 				CEDBC03C1B168E38001A11A3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -211,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDBC02D1B168E38001A11A3 /* Main.storyboard in Resources */,
+				CED223911B1F3ECF0094B2B0 /* Localizable.strings in Resources */,
 				CEDBC0321B168E38001A11A3 /* LaunchScreen.xib in Resources */,
 				CEDBC02F1B168E38001A11A3 /* Images.xcassets in Resources */,
+				CED223971B1F3ED00094B2B0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED2238C1B1F3ECF0094B2B0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +274,35 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CED2238E1B1F3ECF0094B2B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED2238D1B1F3ECF0094B2B0 /* zh */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CED223931B1F3ECF0094B2B0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED223921B1F3ECF0094B2B0 /* zh */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CED223991B1F3ED00094B2B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED223981B1F3ED00094B2B0 /* zh */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		CEDBC02B1B168E38001A11A3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CEDBC02C1B168E38001A11A3 /* Base */,
+				CED223941B1F3ECF0094B2B0 /* zh */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -272,6 +311,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEDBC0311B168E38001A11A3 /* Base */,
+				CED2239A1B1F3ED00094B2B0 /* zh */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

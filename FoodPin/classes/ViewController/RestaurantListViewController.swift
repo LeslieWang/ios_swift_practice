@@ -223,6 +223,12 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
     
     @IBAction func cancelFromCreate(segue:UIStoryboardSegue) {
         // add actions while user cancel creating restaurant
+        println("user canceled creating restaurant")
+    }
+    
+    @IBAction func savedFromCreate(segue:UIStoryboardSegue) {
+        // add actions while user saved a new restaurant
+        println("user saved a new restaurant")
     }
 
     func loadRecords() {

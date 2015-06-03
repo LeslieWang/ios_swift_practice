@@ -139,7 +139,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DoP-lj-3tC">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="zI6-Vr-LlN" kind="unwind" unwindAction="cancelFromCreate:" id="93C-PZ-y4F"/>
+                                <segue destination="zI6-Vr-LlN" kind="unwind" identifier="cancelFromCreate" unwindAction="cancelFromCreate:" id="93C-PZ-y4F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="IyK-8C-6Z4">

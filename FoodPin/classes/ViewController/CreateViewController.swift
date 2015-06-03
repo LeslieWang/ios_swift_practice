@@ -59,10 +59,33 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
         }
         
         if errorStr != "" {
-            let alertController = UIAlertController(title: "Oops", message: errorStr, preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
-            alertController.addAction(okAction)
-            presentViewController(alertController, animated: true, completion: nil)
+            showAlert(errorStr)
+            return
         }
+        
+        if let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            var restaurant:Restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: moc) as! Restaurant
+            restaurant.name = nameText.text
+            restaurant.type = typeText.text
+            restaurant.location = locationText.text
+            restaurant.image = UIImagePNGRepresentation(imageView.image)
+            restaurant.visited = visitedSegmented.selectedSegmentIndex == 0
+
+            var e:NSError?
+            if !moc.save(&e) {
+                println("Failed to insert new restaurant:" + e!.localizedDescription)
+                showAlert("Failed to insert new restaurant.")
+            } else {
+                // TODO: use sugue 'savedFromCreate' instead.
+                performSegueWithIdentifier("cancelFromCreate", sender: self)
+            }
+        }
+    }
+    
+    func showAlert(message:String) {
+        let alertController = UIAlertController(title: "Oops", message: message, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }

@@ -154,6 +154,7 @@
                         <outlet property="nameText" destination="fhw-5U-bwl" id="UaK-Co-Odz"/>
                         <outlet property="typeText" destination="eWf-df-Ucd" id="pTt-4r-07n"/>
                         <outlet property="visitedSegmented" destination="vqO-3c-f3R" id="Cup-Mc-X0C"/>
+                        <segue destination="zI6-Vr-LlN" kind="unwind" identifier="savedFromCreate" unwindAction="savedFromCreate:" id="aA0-qV-iIM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLA-lf-TOb" userLabel="First Responder" sceneMemberID="firstResponder"/>

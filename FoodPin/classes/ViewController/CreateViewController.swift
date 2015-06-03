@@ -76,8 +76,7 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
                 println("Failed to insert new restaurant:" + e!.localizedDescription)
                 showAlert("Failed to insert new restaurant.")
             } else {
-                // TODO: use sugue 'savedFromCreate' instead.
-                performSegueWithIdentifier("cancelFromCreate", sender: self)
+                performSegueWithIdentifier("savedFromCreate", sender: self)
             }
         }
     }

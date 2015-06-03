@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var imageView:UIImageView!
+    @IBOutlet var nameText:UITextField!
+    @IBOutlet var typeText:UITextField!
+    @IBOutlet var locationText:UITextField!
+    @IBOutlet var visitedSegmented:UISegmentedControl!
+    
+    var setImage = false
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
@@ -29,11 +36,33 @@ class CreateViewController: UITableViewController, UIImagePickerControllerDelega
         imageView.image = image
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.clipsToBounds = true
+        setImage = true
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     // fix status bar bug, status bar style will change to black after displaying the photo library
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+    }
+    
+    // called while user click save button.
+    @IBAction func save() {
+        var errorStr = ""
+        if nameText.text == "" {
+            errorStr = "Missing name field."
+        } else if typeText.text == "" {
+            errorStr = "Missing type field."
+        } else if locationText.text == "" {
+            errorStr = "Missing location field."
+        } else if !setImage {
+            errorStr = "Missing image."
+        }
+        
+        if errorStr != "" {
+            let alertController = UIAlertController(title: "Oops", message: errorStr, preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
 }

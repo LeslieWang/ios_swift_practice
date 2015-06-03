@@ -142,9 +142,18 @@
                                 <segue destination="zI6-Vr-LlN" kind="unwind" unwindAction="cancelFromCreate:" id="93C-PZ-y4F"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IyK-8C-6Z4">
+                            <connections>
+                                <action selector="save" destination="dev-rN-pRU" id="z7u-XW-Ihh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="KtJ-Vv-Jc9" id="opM-vx-tgn"/>
+                        <outlet property="locationText" destination="U08-PX-zRA" id="3Mh-mj-wmE"/>
+                        <outlet property="nameText" destination="fhw-5U-bwl" id="UaK-Co-Odz"/>
+                        <outlet property="typeText" destination="eWf-df-Ucd" id="pTt-4r-07n"/>
+                        <outlet property="visitedSegmented" destination="vqO-3c-f3R" id="Cup-Mc-X0C"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLA-lf-TOb" userLabel="First Responder" sceneMemberID="firstResponder"/>

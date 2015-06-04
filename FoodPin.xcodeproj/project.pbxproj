@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */; };
 		CE3EA6A71B1D9BFF00D188B0 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */; };
+		CEBA6F161B2088BB005EA2B4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA6F151B2088BB005EA2B4 /* PageViewController.swift */; };
+		CEBA6F181B20894A005EA2B4 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA6F171B20894A005EA2B4 /* PageContentViewController.swift */; };
 		CED2238C1B1F3ECF0094B2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED2238E1B1F3ECF0094B2B0 /* InfoPlist.strings */; };
 		CED223911B1F3ECF0094B2B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED223931B1F3ECF0094B2B0 /* Localizable.strings */; };
 		CED223971B1F3ED00094B2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED223991B1F3ED00094B2B0 /* InfoPlist.strings */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewCell.swift; path = classes/ViewController/DetailViewCell.swift; sourceTree = "<group>"; };
 		CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = classes/ViewController/CreateViewController.swift; sourceTree = "<group>"; };
+		CEBA6F151B2088BB005EA2B4 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = classes/ViewController/PageViewController.swift; sourceTree = "<group>"; };
+		CEBA6F171B20894A005EA2B4 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = classes/ViewController/PageContentViewController.swift; sourceTree = "<group>"; };
 		CED2238D1B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CED223921B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CED223941B1F3ECF0094B2B0 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Main.strings; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				CED70E081B1C491100ED0BD0 /* DetailViewController.swift */,
 				CE3EA6A41B1D553900D188B0 /* DetailViewCell.swift */,
 				CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */,
+				CEBA6F151B2088BB005EA2B4 /* PageViewController.swift */,
+				CEBA6F171B20894A005EA2B4 /* PageContentViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			files = (
 				CE3EA6A71B1D9BFF00D188B0 /* CreateViewController.swift in Sources */,
 				CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */,
+				CEBA6F161B2088BB005EA2B4 /* PageViewController.swift in Sources */,
 				CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */,
+				CEBA6F181B20894A005EA2B4 /* PageContentViewController.swift in Sources */,
 				CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */,
 				CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */,
 				CED70E091B1C491100ED0BD0 /* DetailViewController.swift in Sources */,

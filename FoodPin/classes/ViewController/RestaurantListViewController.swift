@@ -22,6 +22,11 @@ class RestaurantListViewController: UITableViewController, NSFetchedResultsContr
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        // start splash page
+        if let splashController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as? PageViewController {
+            self.presentViewController(splashController, animated: true, completion: nil)
+        }
+        
         // set table cell flexible in vertical
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension

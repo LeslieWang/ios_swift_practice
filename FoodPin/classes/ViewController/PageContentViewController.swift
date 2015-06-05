@@ -12,6 +12,9 @@ class PageContentViewController: UIViewController {
     @IBOutlet var headingLabel:UILabel!
     @IBOutlet var subLabel:UILabel!
     @IBOutlet var imageView:UIImageView!
+    @IBOutlet var nextButton:UIButton!
+    @IBOutlet var completeButton:UIButton!
+    @IBOutlet var pageIndicator:UIPageControl!
     
     var index = 0
     var heading = ""
@@ -24,5 +27,18 @@ class PageContentViewController: UIViewController {
         headingLabel.text = heading
         subLabel.text = subHead
         imageView.image = UIImage(named: image)
+        pageIndicator.currentPage = index
+        nextButton.hidden = index == 2
+        completeButton.hidden = index != 2
+    }
+    
+    @IBAction func onNext() {
+        (parentViewController as! PageViewController).goNext(index)
+    }
+    
+    @IBAction func complete() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(true, forKey: "hasViewedWelcome")
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

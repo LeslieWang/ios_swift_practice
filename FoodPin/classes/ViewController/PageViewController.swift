@@ -53,5 +53,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         }
         return nil
     }
+    
+    func goNext(index:Int) {
+        if let nextPage = viewControllerAtIndex(index + 1) {
+            setViewControllers([nextPage], direction: .Forward, animated: true, completion: nil)
+        }
+    }
 }
 

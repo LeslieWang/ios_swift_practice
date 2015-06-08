@@ -24,6 +24,7 @@
 		CEDBC0481B169034001A11A3 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */; };
 		CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC04B1B169544001A11A3 /* Restaurant.swift */; };
 		CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */; };
+		CEDD26531B257BAE0021751B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD26521B257BAE0021751B /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CEDBC0471B169034001A11A3 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantListViewController.swift; path = classes/ViewController/RestaurantListViewController.swift; sourceTree = "<group>"; };
 		CEDBC04B1B169544001A11A3 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = classes/Model/Restaurant.swift; sourceTree = "<group>"; };
 		CEDBC04D1B16A226001A11A3 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantCell.swift; path = classes/ViewController/RestaurantCell.swift; sourceTree = "<group>"; };
+		CEDD26521B257BAE0021751B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = classes/ViewController/MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				CE3EA6A61B1D9BFF00D188B0 /* CreateViewController.swift */,
 				CEBA6F151B2088BB005EA2B4 /* PageViewController.swift */,
 				CEBA6F171B20894A005EA2B4 /* PageContentViewController.swift */,
+				CEDD26521B257BAE0021751B /* MoreViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				CEDBC04E1B16A226001A11A3 /* RestaurantCell.swift in Sources */,
 				CEBA6F161B2088BB005EA2B4 /* PageViewController.swift in Sources */,
 				CEDBC04C1B169544001A11A3 /* Restaurant.swift in Sources */,
+				CEDD26531B257BAE0021751B /* MoreViewController.swift in Sources */,
 				CEBA6F181B20894A005EA2B4 /* PageContentViewController.swift in Sources */,
 				CE3EA6A51B1D553900D188B0 /* DetailViewCell.swift in Sources */,
 				CEDBC0251B168E38001A11A3 /* AppDelegate.swift in Sources */,

@@ -447,10 +447,10 @@
             </objects>
             <point key="canvasLocation" x="86" y="1026"/>
         </scene>
-        <!--View Controller-->
+        <!--More-->
         <scene sceneID="K4C-pk-WGb">
             <objects>
-                <viewController id="VeM-cD-vOD" sceneMemberID="viewController">
+                <viewController title="More" id="VeM-cD-vOD" customClass="MoreViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kGg-ZM-b91"/>
                         <viewControllerLayoutGuide type="bottom" id="OYO-zd-Vgz"/>
@@ -459,20 +459,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This an empty tab page" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUG-i9-FhQ">
-                                <rect key="frame" x="47.5" y="270.5" width="226.5" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-nq-EZH">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ahs-H1-SvH"/>
+                                    <constraint firstAttribute="width" constant="200" id="jRR-PO-6al"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="eUG-i9-FhQ" secondAttribute="centerY" id="VAd-Ky-hyy"/>
-                            <constraint firstAttribute="centerX" secondItem="eUG-i9-FhQ" secondAttribute="centerX" id="WdG-2B-16X"/>
+                            <constraint firstAttribute="centerX" secondItem="VNP-nq-EZH" secondAttribute="centerX" id="M9t-Wh-Qhu"/>
+                            <constraint firstAttribute="centerY" secondItem="VNP-nq-EZH" secondAttribute="centerY" id="cQ7-vy-3iu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8WB-dY-BqB"/>
+                    <navigationItem key="navigationItem" title="More" id="8WB-dY-BqB"/>
+                    <connections>
+                        <outlet property="imageVieW" destination="VNP-nq-EZH" id="yqy-yD-CHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OA-ch-hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
